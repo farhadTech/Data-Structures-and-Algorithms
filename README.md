@@ -4,9 +4,6 @@ Welcome to the Data Structures and Algorithms (DSA) & Competitive Programming re
 📑 Table of Contents<br>
 Introduction<br>
 What is DSA?<br>
-<br>
-<br>
-
 Why DSA is Important<br>
 DSA in Real Life and Production<br>
 Repository Structure<br>
@@ -43,41 +40,38 @@ Web Development: Understanding of stacks, queues, and trees helps in DOM manipul
 🗂️ Repository Structure
 The repository is organized as follows:<br><br>
 
-Copy code
-root
-│   README.md
-│   dsa_guide.pdf
+root <br>
+│   README.md <br>
+│   dsa_guide.pdf <br><br>
 │
-├── data_structures
-│   ├── arrays
-│   ├── linked_lists
-│   ├── stacks
-│   ├── queues
-│   ├── trees
-│   ├── graphs
-│   └── hash_tables
+├── data_structures<br>
+│   ├── arrays<br>
+│   ├── linked_lists<br>
+│   ├── stacks<br>
+│   ├── queues<br>
+│   ├── trees<br>
+│   ├── graphs<br>
+│   └── hash_tables<br>
 │
-├── algorithms
-│   ├── searching
-│   ├── sorting
-│   ├── dynamic_programming
-│   ├── greedy
-│   ├── backtracking
-│   └── divide_and_conquer
+├── algorithms<br>
+│   ├── searching<br>
+│   ├── sorting<br>
+│   ├── dynamic_programming<br>
+│   ├── greedy<br>
+│   ├── backtracking<br>
+│   └── divide_and_conquer<br>
 │
-├── competitive_programming
-│   ├── problem_statements
-│   └── solutions
-│
-└── utils
-    └── common_utils
-<br><br>
+├── competitive_programming<br>
+│   ├── problem_statements<br>
+│   └── solutions<br>
+│<br>
+└── utils<br>
+    └── common_utils<br>
+<br>
 🏁 Getting Started
-To get started with this repository:
+To get started with this repository:<br>
 
 Clone the repository:
-sh
-Copy code
 git clone https://github.com/yourusername/dsa-and-competitive-programming.git
 Navigate through folders to find specific data structures, algorithms, and competitive programming problems.
 Refer to dsa_guide.pdf for detailed explanations and guides.
