@@ -1,0 +1,34 @@
+Jane is one of the most talented young programmers as well as an astrophysicist. Recently she discovered a planet and named it Jotunheim - the world of giants. As you already guessed that the inhabitants are all giants. Among them the Frost Giants are the most evil ones. Before Jane could publicly announce her great discovery, the Frost Giants came and captured her in a maze. Since the Giants would be discovered to the universe because of her, that's why they lit fires on some positions in the maze to kill her.
+
+You are given Jane's location in the maze and the positions of the fires lit by the Frost Giants whom are always keeping an eye on her; you must find out whether Jane can escape from the maze before fire catches her, and how fast she can do it.
+
+The Maze is defined as a 2D grid and the locations are defined as squares. The cost of each move is one square per minute. In each move, Jane can move vertically or horizontally but not diagonally. She cannot move to a square which is blocked by an obstacle, or which is already burning. If a square has fire in it, in the next minute, fires spread to its adjacent non-obstacle squares (vertically or horizontally). Jane can escape from the maze from any squares that borders the edge of the maze.
+
+Input
+Input starts with an integer T (≤ 50), denoting the number of test cases.
+
+The first line of each test case contains the two integers R and C, separated by spaces, with 1 ≤ R, C ≤ 200 The following R lines of the test case each contain one row of the maze. Each of these lines contains exactly C characters, and each of these characters is one of:
+
+#, an obstacle.
+., a free location.
+J, Jane's initial position in the maze (there will be exactly one J in the maze).
+F, position of a fire.
+Output
+For each case, print the case number and IMPOSSIBLE if Jane cannot escape from the maze before fire reaches her, or the earliest time for Jane to safely escape from the maze, in minutes.
+
+Sample
+Inputcopy
+2
+4 5
+##.##
+#JF.#
+#...#
+#...#
+3 3
+###
+#J.
+#.F
+
+Outputcopy
+Case 1: 3
+Case 2: IMPOSSIBLE

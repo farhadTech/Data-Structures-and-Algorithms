@@ -1,0 +1,105 @@
+_________________________________________
+DP - COIN CHANGE
+_________________________________________
+
+#include <iostream>
+#include <vector>
+#include <climits>
+
+using namespace std;
+
+int minCoins(vector<int>& coins, int amount) {
+    int n = coins.size();
+
+
+    vector<vector<int>> dp(n + 1, vector<int>(amount + 1, 0));  //2D vector for storing the results of subproblems
+
+
+    for (int i = 0; i <= n; i++) {
+        dp[i][0] = 0;   // Initialize to 0 (base case)
+    }
+
+    for (int j = 1; j <= amount; j++) {
+        dp[0][j] = INT_MAX; // Initialize to infinity
+    }
+
+    // Filling the dp table
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= amount; j++) {
+            if (coins[i - 1] > j) {
+                dp[i][j] = dp[i - 1][j];
+            } else {
+                dp[i][j] = min(dp[i - 1][j], 1 + dp[i][j - coins[i - 1]]);
+            }
+        }
+    }
+
+    return dp[n][amount];
+}
+
+int main() {
+    vector<int> coins = {1, 5,6, 9};
+    int amount = 10;
+
+    int min_num_coins = minCoins(coins, amount);
+    cout << "Minimum number of coins required: " << min_num_coins << endl;
+
+    return 0;
+}
+
+
+_________________________________________
+DP_0/1 KnapSack
+_________________________________________
+
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int knapsack(vector<int>& weights, vector<int>& values, int n, int capacity, vector<int>& selected_items) {
+    vector<vector<int>> dp(n + 1, vector<int>(capacity + 1, 0));
+
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= capacity; j++) {
+            if (weights[i - 1] > j) {
+                dp[i][j] = dp[i - 1][j];
+            } else {
+                dp[i][j] = max(dp[i - 1][j], values[i - 1] + dp[i - 1][j - weights[i - 1]]);
+            }
+        }
+    }
+
+    int max_value = dp[n][capacity];
+
+    int i = n, j = capacity;
+    while (i > 0 && j > 0) {
+        if (dp[i][j] != dp[i - 1][j]) {
+            selected_items.push_back(i);
+            j -= weights[i - 1];
+        }
+        i--;
+    }
+
+    return max_value;
+}
+
+int main() {
+    vector<int> weights = {3,4,5,6};
+    vector<int> values = {2,3,4,1};
+    int n = weights.size();
+    int capacity = 8;
+    vector<int> selected_items;
+
+    int max_value = knapsack(weights, values, n, capacity, selected_items);
+
+    cout << "Maximum profit: " << max_value << endl;
+    cout << "Selected items num: ";
+    for (int i = 0; i < selected_items.size(); i++) {
+        cout << selected_items[i] << " ";
+    }
+    cout << endl;
+
+    return 0;
+}
+

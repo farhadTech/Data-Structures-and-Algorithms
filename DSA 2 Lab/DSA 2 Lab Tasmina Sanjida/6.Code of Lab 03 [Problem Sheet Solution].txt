@@ -1,0 +1,166 @@
+3.
+#include <iostream>
+using namespace std;
+int power(int x, int y) {
+    if (y == 0) {
+        return 1;
+    } else {
+        return x * power(x, y - 1);
+    }
+}
+
+int main() {
+    int base, pow;
+    cout << "Enter the base: ";
+    cin >> base;
+
+    cout << "Enter the power: ";
+    cin >> pow;
+
+    cout << "Result is: " << power(base, pow) << endl;
+
+    return 0;
+}
+5.
+#include <iostream>
+using namespace std;
+int sumOfDigits(int number) {
+    if (number == 0) {
+        return 0;
+    } else {
+        return (number % 10) + sumOfDigits(number / 10);
+    }
+}
+
+int main() {
+    int n, sum;
+    cout << "Enter an integer: ";
+    cin >> n;
+
+    sum = sumOfDigits(n);
+
+    cout << "Sum is: " << sum << endl;
+
+    return 0;
+}
+
+
+
+6.
+#include <iostream>
+using namespace std;
+int arraySum(int arr[], int n) {
+    if (n == 1) {
+        return arr[0];
+    } else {
+        return arr[n - 1] + arraySum(arr, n - 1);
+    }
+}
+
+int main() {
+    int n,i, sum;
+    cout << "Enter the size of the array: ";
+    cin >> n;
+
+    int arr[n];
+    cout << "Enter the elements of the array:\n";
+
+    for (i = 0; i < n; i++) {
+        cin >> arr[i];
+    }
+
+    sum = arraySum(arr, n);
+    cout << "The sum of the elements of the array is: " << sum << endl;
+
+    return 0;
+}
+12.
+#include <iostream>
+using namespace std;
+void printArrayReverse(int arr[], int n) {
+    if (n == 0) {
+        return;
+    } else {
+        cout << arr[n - 1] << " ";
+        printArrayReverse(arr, n - 1);
+    }
+}
+
+int main() {
+    int n, i;
+    cout << "Enter the size of the array: ";
+    cin >> n;
+
+    int arr[n];
+
+    cout << "Enter the elements of the array:\n";
+
+    for (i = 0; i < n; ++i) {
+        cin >> arr[i];
+    }
+
+    cout << "Reverse Array: ";
+    printArrayReverse(arr, n);
+
+    return 0;
+}
+
+
+13.
+#include <iostream>
+using namespace std;
+void printEven(int start, int end) {
+    if (start > end) {
+        return;
+    } else {
+        if (start % 2 == 0) {
+            cout << start << " ";
+        }
+        printEven(start + 1, end);
+    }
+}
+
+int main() {
+    int start, end;
+    cout << "Enter the starting and ending numbers of the range: ";
+    cin >> start >> end;
+
+    cout << "Even numbers in the given range are: ";
+    printEven(start, end);
+
+    return 0;
+}
+
+
+
+14.
+#include <iostream>
+#include <cctype>
+using namespace std;
+
+bool isPalindrome(const std::string& str, int start, int end) {
+    if (start >= end) {
+        return true;
+    } else {
+        if (std::tolower(str[start]) != std::tolower(str[end])) {
+            return false;
+        }
+        return isPalindrome(str, start + 1, end - 1);
+    }
+}
+
+int main() {
+    string input;
+    cout << "Enter a string to check if it's a palindrome: ";
+    getline(cin, input);
+
+    if (isPalindrome(input, 0, input.length() - 1)) {
+        cout << "Palindrome.\n";
+    } else {
+        cout << "Not a palindrome.\n";
+    }
+
+    return 0;
+}
+
+

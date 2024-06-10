@@ -1,0 +1,33 @@
+I have a land consisting of n trees. Since the trees are favorites to cows, I have a big problem saving them. So, I have planned to make a fence around the trees. I want the fence to be convex (curves are allowed) and the minimum distance from any tree to the fence is at least d units. And definitely I want a single big fence that covers all trees.
+
+You are given all the information of the trees, to be specific, the land is shown as a 2D plane and the trees are plotted as 2D points. You have to find the perimeter of the fence that I need to create as described above. And you have to minimize the perimeter.
+
+
+One tree, a circular fence is needed	Two trees, an oval fence is needed
+Input
+Input starts with an integer T (≤ 10), denoting the number of test cases.
+
+Each case starts with a line containing two integers n (1 ≤ n ≤ 50000), d (1 ≤ d ≤ 1000). Each of the next lines contains two integers xi yi (-108 ≤ xi, yi ≤ 108) denoting a position of a tree. You can assume that all the positions are distinct.
+
+Output
+For each case, print the case number and the minimum possible perimeter of the fence. Errors less than 10-3 will be ignored.
+
+Sample
+Inputcopy
+3
+1 2
+0 0
+2 1
+0 -1
+0 2
+3 5
+0 0
+5 0
+0 5
+
+Outputcopy
+Case 1: 12.566370614
+Case 2: 12.2831853
+Case 3: 48.4869943478
+Note
+Dataset is huge, use faster I/O methods.

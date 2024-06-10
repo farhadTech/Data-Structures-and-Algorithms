@@ -1,0 +1,146 @@
+1.
+#include iostream
+void displayNumbers(int current, int N) {
+    if (current  N) {
+        return;
+    }
+    stdcout  current   ;
+    displayNumbers(current + 1, N);
+}
+
+int main() {
+    int N;
+    stdcout  Enter the value of N ;
+    stdcin  N;
+    stdcout  Result ;
+    displayNumbers(1, N);
+    return 0;
+}
+
+
+2.
+#include iostream
+int calculateSum(int n) {
+    if (n == 0) {
+        return 0;
+    }
+    return n + calculateSum(n - 1);
+}
+
+int main() {
+    int N;
+    stdcout  Enter the value of N ;
+    stdcin  N;
+    int sum = calculateSum(N);
+    stdcout  Sum is   sum  stdendl;
+    return 0;
+}
+
+3.
+#include iostream
+int fibonacci(int n) {
+    if (n == 0) {
+        return 0;
+    } else if (n == 1) {
+        return 1;
+    }
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+int main() {
+    int N;
+    stdcout  Enter the number ;
+    stdcin  N;
+
+    stdcout  Fibonacci Series ;
+    for (int i = 0; i  N; ++i) {
+        stdcout  fibonacci(i)   ;
+    }
+
+    return 0;
+}
+
+4.
+#include iostream
+using namespace std;
+void printArray(int arr[], int start, int size) {
+    if (start == size) {
+        return;
+    }
+    stdcout  arr[start]   ;
+    printArray(arr, start + 1, size);
+}
+
+int main() {
+    int size;
+    coutEnter the size of the array ;
+    cinsize;
+    int arr[size];
+
+    stdcout  Enter the elements of the array ;
+    for (int i = 0; i  size; ++i) {
+        stdcin  arr[i];
+    }
+
+    stdcout  Printing the elements using recursion ;
+    printArray(arr, 0, size);
+
+    return 0;
+}
+
+5.
+#include iostream
+int countDigits(int number) {
+    if (number == 0) {
+        return 0;
+    }
+
+    return 1 + countDigits(number  10);
+}
+
+int main() {
+    int num, digitCount;
+    stdcout  Enter a number ;
+    stdcin  num;
+
+    digitCount = countDigits(num);
+
+    stdcout  Number of digits in   num   is   digitCount  stdendl;
+
+    return 0;
+}
+
+6.
+#include iostream
+using namespace std;
+void printEvenOrOdd(int start, int end, bool isEven) {
+    if (start  end) {
+        return;
+    }
+
+    if ((isEven && start % 2 == 0)  (!isEven && start % 2 != 0)) {
+        stdcout  start   ;
+    }
+    printEvenOrOdd(start + 1, end, isEven);
+}
+
+int main() {
+    int start, end;
+    char choice;
+
+    stdcout  Enter the start of the range ;
+    stdcin  start;
+
+    stdcout  Enter the end of the range ;
+    stdcin  end;
+
+    stdcout  Do you want to print even (e) or odd (o) numbers ;
+    stdcin  choice;
+
+    bool isEven = (choice == 'e'  choice == 'E');
+
+    stdcout  Even or Odd numbers in the range ;
+    printEvenOrOdd(start, end, isEven);
+
+    return 0;
+}
