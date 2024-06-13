@@ -1,36 +1,21 @@
 #include <iostream>
-#include <fstream>
-#include <vector>
-#include <cstring>
+#include <stdio.h>
 using namespace std;
 
-int find_smallest_multiple(int n) {
-    int remainder = 1 % n;
-    vector<bool> visited(n, false);
-    int count = 1;
+int main()
+{
+    int n,ones,c;
 
-    while (remainder != 0 && !visited[remainder]) {
-        visited[remainder] = true;
-        remainder = (remainder * 10 + 1) % n;
-        count++;
+    while(scanf("%d",&n)==1){
+        ones = 0;
+        c =0;
+        do{
+
+            c = (c*10+1)%n;
+            ones ++;
+        }
+        while(c!=0);
+        printf("%d\n",ones);
     }
-
-    if (remainder == 0) {
-        return count;
-    } else {
-        return -1;
-    }
-}
-
-int main() {
-    ifstream infile("input.txt");
-    int n;
-
-    while (infile >> n) {
-        int result = find_smallest_multiple(n);
-        cout << result << endl;
-    }
-
-    infile.close();
     return 0;
 }

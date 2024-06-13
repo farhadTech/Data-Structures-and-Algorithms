@@ -1,6 +1,5 @@
 #include <iostream>
 #include <vector>
-
 using namespace std;
 
 int countDivisors(int n) {
@@ -30,18 +29,31 @@ pair<int, int> maxDivisorsInRange(int lower, int upper) {
 }
 
 int main() {
-    int N;
-    cin >> N;
+    int lower, upper;
 
-    for (int i = 0; i < N; i++) {
-        int lower, upper;
-        cin >> lower >> upper;
+    lower = 1, upper = 10;
+    pair<int, int> result = maxDivisorsInRange(lower, upper);
+    cout << "Between " << lower << " and " << upper << ", "
+        << result.first << " has a maximum of " << result.second
+        << " divisors." << endl;
 
-        pair<int, int> result = maxDivisorsInRange(lower, upper);
-        cout << "Between " << lower << " and " << upper << ", "
-             << result.first << " has a maximum of " << result.second
-             << " divisors." << endl;
-    }
+    lower = 10, upper = 20;
+    result = maxDivisorsInRange(lower, upper);
+    cout << "Between " << lower << " and " << upper << ", "
+        << result.first << " has a maximum of " << result.second
+        << " divisors." << endl;
+
+    lower = 1000, upper = 1000;
+    result = maxDivisorsInRange(lower, upper);
+    cout << "Between " << lower << " and " << upper << ", "
+        << result.first << " has a maximum of " << result.second
+        << " divisors." << endl;
+
+    lower = 999999900, upper = 1000000000;
+    result = maxDivisorsInRange(lower, upper);
+    cout << "Between " << lower << " and " << upper << ", "
+        << result.first << " has a maximum of " << result.second
+        << " divisors." << endl;
 
     return 0;
 }
