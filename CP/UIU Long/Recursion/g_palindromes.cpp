@@ -1,6 +1,4 @@
-#include<iostream>
-#include<string>
-#include<map>
+#include<bits/stdc++.h>
 
 using namespace std;
 

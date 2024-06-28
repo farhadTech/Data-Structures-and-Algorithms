@@ -1,4 +1,7 @@
 *.exe
 *.class
 *.vscode
+*.cph
 tempCodeRunnerFile.cpp
+tempCodeRunnerFile.java
+tempCodeRunnerFile.py

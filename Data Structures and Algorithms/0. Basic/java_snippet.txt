@@ -1,0 +1,100 @@
+{
+	// Place your snippets for java here. Each snippet is defined under a snippet name and has a prefix, body and
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+
+	"java-snippet" : {
+		"prefix": "snippet",
+		"body": [
+			"import java.util.*;",
+			"public class ClassName{\n",
+
+				"\tpublic static void main(String[] args) {",
+					"\t\tScanner sc = new Scanner(System.in);\n",
+				"\t}",
+			"}",
+		]
+	},
+
+	"input-array" : {
+		"prefix": "inputArray",
+		"body": [
+			"int n = sc.nextInt();",
+			"int []arr = new int[n];",
+			"for(int i = 0; i < n; i++){",
+			"\tarr[i] = sc.nextInt();",
+			"}",
+		]
+	},
+
+	"print-array" : {
+		"prefix": "printArray",
+		"body": [
+			"public static void print_array(int []arr, int n) {",
+				"\tfor(int i = 0; i < n; i++){",
+				"\t\tSystem.out.print(arr[i] + \" \");",
+				"\t}",
+				"\tSystem.out.println();",
+			"}",
+		]
+	},
+
+	"sout" : {
+		"prefix": "sout",
+		"body": [
+			"System.out.print($1);"
+		]
+	},
+
+	"soutln": {
+		"prefix": "soutln",
+		"body":[
+			"System.out.println($1);",
+			"$2",
+		]
+	},
+
+	"scan" : {
+		"prefix": "sc",
+		"body":[
+			"Scanner sc = new Scanner(System.in);",
+		]
+	},
+
+	"psvm" : {
+		"prefix": "psvm",
+		"body": [
+			"public static void main(String[] args){\n\n",
+			"\t$1",
+			"}",
+		]
+	},
+
+	"for-loop": {
+		"prefix": "fori",
+		"body":[
+			"for(int i = 0; i < n; i++) {",
+			"\t$1",
+			"}"
+		]
+	},
+
+	"for-loop2": {
+		"prefix": "fori2",
+		"body":[
+			"for(int i = 1; i <= n; i++) {",
+			"\t$1",
+			"}"
+		]
+	}
+}

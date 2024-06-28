@@ -1,6 +1,9 @@
+<h3>
 📚 Data Structures and Algorithms (DSA) & Competitive Programming Repository
 Welcome to the Data Structures and Algorithms (DSA) & Competitive Programming repository! This repository is a treasure trove of code implementations, problem statements, and solutions designed to help you master DSA and excel in competitive programming. Dive in and elevate your coding skills!
+</h3>
 
+<h3>
 📑 Table of Contents<br>
 Introduction<br>
 What is DSA?<br>
@@ -10,34 +13,36 @@ Repository Structure<br>
 Getting Started<br>
 Contributing<br>
 License<br><br><br>
+</h3>
+<br>
 
 🔰 Introduction<br>
 Welcome to your one-stop destination for mastering Data Structures and Algorithms (DSA) and honing your competitive programming skills. Whether you're a student, professional, or coding enthusiast, this repository is designed to help you understand and implement fundamental and advanced concepts in DSA and tackle challenging competitive programming problems.<br><br>
 
 📘 What is DSA?<br>
-Data Structures and Algorithms (DSA) are the building blocks of computer science and programming.<br>
+Data Structures and Algorithms (DSA) are the building blocks of computer science and programming.<br><br>
 
 Data Structures: Methods to store and organize data for efficient use. Examples include arrays, linked lists, stacks, queues, trees, graphs, and hash tables.
-Algorithms: Step-by-step procedures for solving problems. Examples include searching algorithms, sorting algorithms, dynamic programming, greedy algorithms, and more.<br>
+Algorithms: Step-by-step procedures for solving problems. Examples include searching algorithms, sorting algorithms, dynamic programming, greedy algorithms, and more.<br><br>
 
-🌟 Why DSA is Important
+🌟 Why DSA is Important? <br>
 Mastering DSA is crucial for several reasons:<br>
 
-Efficient Problem Solving: Design efficient solutions to complex problems.
-Technical Interviews: DSA knowledge is often a key requirement in technical interviews for software development roles.
-Performance Optimization: Write optimized code that performs well under various constraints.
+Efficient Problem Solving: Design efficient solutions to complex problems. <br>
+Technical Interviews: DSA knowledge is often a key requirement in technical interviews for software development roles. <br>
+Performance Optimization: Write optimized code that performs well under various constraints. <br>
 Foundation for Advanced Topics: Many advanced computer science topics, such as machine learning and big data, build upon basic DSA principles.<br>
 
-🚀 DSA in Real Life and Production
+🚀 DSA in Real Life and Production: <br>
 In real-life and production environments, DSA plays a vital role:<br>
 
-Databases: Data structures like B-trees and hash tables are used in indexing and database management systems.
-Networking: Algorithms like Dijkstra's and Kruskal's are used in routing and network optimization.
-Artificial Intelligence: Tree structures and graph algorithms are used in game development, decision making, and AI.
+Databases: Data structures like B-trees and hash tables are used in indexing and database management systems. <br>
+Networking: Algorithms like Dijkstra's and Kruskal's are used in routing and network optimization. <br>
+Artificial Intelligence: Tree structures and graph algorithms are used in game development, decision making, and AI.<br>
 Web Development: Understanding of stacks, queues, and trees helps in DOM manipulation and backend logic.
 <br>
 
-🗂️ Repository Structure
+🗂️ Repository Structure<br>
 The repository is organized as follows:<br><br>
 
 root <br>
@@ -68,7 +73,9 @@ root <br>
 └── utils<br>
     └── common_utils<br>
 <br>
+<h3>
 🏁 Getting Started
+</h3>
 To get started with this repository:<br>
 
 Clone the repository:
